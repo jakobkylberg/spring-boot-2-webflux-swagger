@@ -10,8 +10,7 @@ public class IntegerHandler {
     public Mono<ServerResponse> getInteger(final ServerRequest request) {
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(Mono.just(1), Integer.class);
+                .body(Mono.just(new IntegerResponse(1)), IntegerResponse.class);
     }
-
 
 }
